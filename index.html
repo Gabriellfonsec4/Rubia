@@ -5,79 +5,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#4a0d1e">
+  <meta name="site-version" content="mobile-fix-2">
   <meta name="description" content="Rubia Honorato — estética avançada, injetáveis, cuidados faciais, corporais e capilares em Lins/SP.">
+
   <title>Rubia Honorato | Estética Avançada</title>
+
+  <!-- Faz a foto principal carregar imediatamente -->
+  <link rel="preload" as="image" href="assets/rubia-honorato.webp?v=2" type="image/webp" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- O ?v=2 impede o celular de carregar o CSS antigo -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
-  <!-- Ícones vetoriais: evitam emojis inconsistentes no celular. -->
+  <!-- Ícones SVG: evita emojis diferentes no mobile -->
   <svg class="svg-sprite" aria-hidden="true">
+
     <symbol id="i-arrow" viewBox="0 0 24 24">
       <path d="M5 12h14M13 6l6 6-6 6" />
     </symbol>
+
     <symbol id="i-check" viewBox="0 0 24 24">
       <path d="m5 12 4 4L19 6" />
     </symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24">
-      <path d="M5 3v3M19 3v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
-    </symbol>
+
     <symbol id="i-clock" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="9" />
       <path d="M12 7v5l3 2" />
     </symbol>
+
     <symbol id="i-pin" viewBox="0 0 24 24">
       <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
       <circle cx="12" cy="10" r="2.5" />
     </symbol>
+
     <symbol id="i-phone" viewBox="0 0 24 24">
       <path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-4-1-2 2c-4-1.5-7.5-5-9-9l2-2-1-4Z" />
     </symbol>
+
     <symbol id="i-instagram" viewBox="0 0 24 24">
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <path d="M17.5 6.5h.01" />
     </symbol>
+
     <symbol id="i-message" viewBox="0 0 24 24">
       <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.5A8.5 8.5 0 1 1 21 11.5Z" />
       <path d="M8 12h.01M12 12h.01M16 12h.01" />
     </symbol>
+
     <symbol id="i-expand" viewBox="0 0 24 24">
       <path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" />
     </symbol>
+
     <symbol id="i-close" viewBox="0 0 24 24">
       <path d="m6 6 12 12M18 6 6 18" />
     </symbol>
+
     <symbol id="i-chevron" viewBox="0 0 24 24">
       <path d="m8 10 4 4 4-4" />
     </symbol>
+
     <symbol id="i-star" viewBox="0 0 24 24">
       <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" />
     </symbol>
+
     <symbol id="i-shield" viewBox="0 0 24 24">
       <path d="M12 3 20 6v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3Z" />
       <path d="m9 12 2 2 4-4" />
     </symbol>
+
     <symbol id="i-spark" viewBox="0 0 24 24">
       <path d="M12 2c.8 5.4 3.6 8.2 9 9-5.4.8-8.2 3.6-9 9-.8-5.4-3.6-8.2-9-9 5.4-.8 8.2-3.6 9-9Z" />
     </symbol>
+
   </svg>
 
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="header" id="inicio">
     <div class="container nav-wrap">
+
       <a class="brand" href="#inicio" aria-label="Rubia Honorato, início">
         <span class="brand-mark">RH</span>
-        <span class="brand-copy"><strong>Rubia Honorato</strong><small>Estética Avançada</small></span>
+
+        <span class="brand-copy">
+          <strong>Rubia Honorato</strong>
+          <small>Estética Avançada</small>
+        </span>
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav class="nav" id="main-nav" aria-label="Navegação principal">
@@ -88,463 +114,1212 @@
         <a href="#contato">Contato</a>
         <a class="nav-cta" href="#agendamento">Agendar avaliação</a>
       </nav>
+
     </div>
   </header>
 
   <main id="conteudo">
+
+    <!-- INÍCIO -->
     <section class="hero section-dark" aria-labelledby="hero-title">
+
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
+
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> Beleza com ciência e propósito</div>
-          <h1 id="hero-title">Sua beleza, elevada à sua <em>melhor versão.</em></h1>
-          <p>Protocolos personalizados em estética avançada para realçar sua beleza com leveza, técnica e cuidado em cada detalhe.</p>
-          <div class="hero-actions">
-            <a class="button button-gold" href="#agendamento">Agendar avaliação <svg>
-                <use href="#i-arrow"></use>
-              </svg></a>
-            <a class="button button-ghost" href="#tratamentos">Conhecer tratamentos</a>
+
+        <!-- Não possui classe reveal para aparecer imediatamente -->
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            <span></span>
+            Beleza com ciência e propósito
           </div>
+
+          <h1 id="hero-title">
+            Sua beleza, elevada à sua
+            <em>melhor versão.</em>
+          </h1>
+
+          <p>
+            Protocolos personalizados em estética avançada para realçar
+            sua beleza com leveza, técnica e cuidado em cada detalhe.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-gold" href="#agendamento">
+              Agendar avaliação
+              <svg>
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+
+            <a class="button button-ghost" href="#tratamentos">
+              Conhecer tratamentos
+            </a>
+          </div>
+
           <div class="hero-proof">
-            <div class="proof-avatars"><span>RH</span><span><svg>
+
+            <div class="proof-avatars">
+              <span>RH</span>
+
+              <span>
+                <svg>
                   <use href="#i-star"></use>
-                </svg></span><span><svg>
+                </svg>
+              </span>
+
+              <span>
+                <svg>
                   <use href="#i-check"></use>
-                </svg></span></div>
-            <p><strong>Atendimento individualizado</strong><small>Cada protocolo começa com uma avaliação completa.</small></p>
+                </svg>
+              </span>
+            </div>
+
+            <p>
+              <strong>Atendimento individualizado</strong>
+              <small>Cada protocolo começa com uma avaliação completa.</small>
+            </p>
+
           </div>
         </div>
 
-        <div class="hero-visual reveal reveal-delay">
+        <!-- Não possui classe reveal para a foto não ficar invisível -->
+        <div class="hero-visual">
+
           <div class="hero-arch">
             <div class="arch-line"></div>
-            <img src="assets/rubia-honorato.webp" alt="Rubia Honorato, profissional de estética avançada" width="1024" height="1536">
+
+            <img src="assets/rubia-honorato.webp?v=2" alt="Rubia Honorato, profissional de estética avançada" width="1024" height="1536" loading="eager" fetchpriority="high" decoding="async">
           </div>
-          <div class="floating-card floating-card-top"><svg>
+
+          <div class="floating-card floating-card-top">
+            <svg>
               <use href="#i-shield"></use>
-            </svg><span><strong>Estética avançada</strong><small>Protocolos personalizados</small></span></div>
-          <div class="floating-card floating-card-bottom"><svg>
+            </svg>
+
+            <span>
+              <strong>Estética avançada</strong>
+              <small>Protocolos personalizados</small>
+            </span>
+          </div>
+
+          <div class="floating-card floating-card-bottom">
+            <svg>
               <use href="#i-spark"></use>
-            </svg><span><strong>Resultado natural</strong><small>Você, ainda mais confiante</small></span></div>
+            </svg>
+
+            <span>
+              <strong>Resultado natural</strong>
+              <small>Você, ainda mais confiante</small>
+            </span>
+          </div>
+
           <span class="monogram-bg">RH</span>
         </div>
+
       </div>
-      <a class="scroll-cue" href="#sobre"><span>Descubra</span><i></i></a>
+
+      <a class="scroll-cue" href="#sobre">
+        <span>Descubra</span>
+        <i></i>
+      </a>
     </section>
 
+    <!-- FAIXA -->
     <section class="signature-strip" aria-label="Áreas de atuação">
       <div class="marquee-track">
-        <span>Estética facial</span><i></i><span>Injetáveis</span><i></i><span>Estética corporal</span><i></i><span>Terapia capilar</span><i></i><span>Crio de placas</span><i></i><span>Embelezamento do olhar</span><i></i>
-        <span aria-hidden="true">Estética facial</span><i aria-hidden="true"></i><span aria-hidden="true">Injetáveis</span><i aria-hidden="true"></i><span aria-hidden="true">Estética corporal</span><i aria-hidden="true"></i><span aria-hidden="true">Terapia capilar</span><i aria-hidden="true"></i>
+
+        <span>Estética facial</span>
+        <i></i>
+
+        <span>Injetáveis</span>
+        <i></i>
+
+        <span>Estética corporal</span>
+        <i></i>
+
+        <span>Terapia capilar</span>
+        <i></i>
+
+        <span>Crio de placas</span>
+        <i></i>
+
+        <span>Embelezamento do olhar</span>
+        <i></i>
+
+        <span aria-hidden="true">Estética facial</span>
+        <i aria-hidden="true"></i>
+
+        <span aria-hidden="true">Injetáveis</span>
+        <i aria-hidden="true"></i>
+
+        <span aria-hidden="true">Estética corporal</span>
+        <i aria-hidden="true"></i>
+
+        <span aria-hidden="true">Terapia capilar</span>
+        <i aria-hidden="true"></i>
+
       </div>
     </section>
 
+    <!-- SOBRE -->
     <section class="about section" id="sobre">
       <div class="container about-grid">
+
+        <!-- Painel RH no lugar da foto repetida -->
         <div class="about-visual reveal">
-          <div class="about-frame"><img src="assets/rubia-honorato.webp" alt="Rubia Honorato em seu ambiente profissional" loading="lazy"></div>
-          <div class="experience-seal"><strong>RH</strong><span>Excelência<br>em cada detalhe</span></div>
+
+          <div class="about-brand-panel">
+
+            <span class="about-brand-line">
+              Estética avançada
+            </span>
+
+            <strong>RH</strong>
+
+            <blockquote>
+              “A estética vai muito além da aparência:
+              é sobre autoestima, confiança e bem-estar.”
+            </blockquote>
+
+            <small>Rubia Honorato</small>
+
+          </div>
+
+          <div class="experience-seal">
+            <strong>RH</strong>
+
+            <span>
+              Excelência<br>
+              em cada detalhe
+            </span>
+          </div>
+
           <div class="gold-corner"></div>
         </div>
 
         <div class="about-copy reveal">
-          <div class="section-kicker">Conheça a especialista</div>
-          <h2>Cuidado que acolhe.<br><em>Técnica que transforma.</em></h2>
-          <p class="lead">Sou Rubia Honorato, bacharel em Estética e pós-graduanda em Estética Avançada, com ênfase em injetáveis.</p>
-          <p>Minha missão é unir conhecimento, escuta e precisão para criar tratamentos que respeitem sua individualidade. Aqui, estética vai além da aparência: é autoestima, confiança e bem-estar.</p>
-          <div class="credentials">
-            <div><span class="credential-icon"><svg>
-                  <use href="#i-check"></use>
-                </svg></span>
-              <p><strong>Formação especializada</strong><small>Atualização constante em técnicas avançadas</small></p>
-            </div>
-            <div><span class="credential-icon"><svg>
-                  <use href="#i-spark"></use>
-                </svg></span>
-              <p><strong>Olhar individualizado</strong><small>Protocolos pensados para a sua necessidade</small></p>
-            </div>
-            <div><span class="credential-icon"><svg>
-                  <use href="#i-shield"></use>
-                </svg></span>
-              <p><strong>Segurança em primeiro lugar</strong><small>Avaliação criteriosa antes de cada procedimento</small></p>
-            </div>
+
+          <div class="section-kicker">
+            Conheça a especialista
           </div>
-          <a class="text-link" href="#agendamento">Quero uma avaliação <svg>
+
+          <h2>
+            Cuidado que acolhe.<br>
+            <em>Técnica que transforma.</em>
+          </h2>
+
+          <p class="lead">
+            Sou Rubia Honorato, bacharel em Estética e pós-graduanda
+            em Estética Avançada, com ênfase em injetáveis.
+          </p>
+
+          <p>
+            Minha missão é unir conhecimento, escuta e precisão para
+            criar tratamentos que respeitem sua individualidade.
+            Aqui, estética vai além da aparência: é autoestima,
+            confiança e bem-estar.
+          </p>
+
+          <div class="credentials">
+
+            <div>
+              <span class="credential-icon">
+                <svg>
+                  <use href="#i-check"></use>
+                </svg>
+              </span>
+
+              <p>
+                <strong>Formação especializada</strong>
+                <small>Atualização constante em técnicas avançadas</small>
+              </p>
+            </div>
+
+            <div>
+              <span class="credential-icon">
+                <svg>
+                  <use href="#i-spark"></use>
+                </svg>
+              </span>
+
+              <p>
+                <strong>Olhar individualizado</strong>
+                <small>Protocolos pensados para a sua necessidade</small>
+              </p>
+            </div>
+
+            <div>
+              <span class="credential-icon">
+                <svg>
+                  <use href="#i-shield"></use>
+                </svg>
+              </span>
+
+              <p>
+                <strong>Segurança em primeiro lugar</strong>
+                <small>Avaliação criteriosa antes de cada procedimento</small>
+              </p>
+            </div>
+
+          </div>
+
+          <a class="text-link" href="#agendamento">
+            Quero uma avaliação
+            <svg>
               <use href="#i-arrow"></use>
-            </svg></a>
+            </svg>
+          </a>
+
         </div>
       </div>
     </section>
 
+    <!-- TRATAMENTOS -->
     <section class="treatments section section-soft" id="tratamentos">
       <div class="container">
+
         <div class="section-heading centered reveal">
-          <div class="section-kicker">Experiências de cuidado</div>
-          <h2>Tratamentos pensados para <em>revelar você.</em></h2>
-          <p>Escolha uma categoria e descubra protocolos criados para valorizar sua beleza com naturalidade.</p>
+
+          <div class="section-kicker">
+            Experiências de cuidado
+          </div>
+
+          <h2>
+            Tratamentos pensados para
+            <em>revelar você.</em>
+          </h2>
+
+          <p>
+            Escolha uma categoria e descubra protocolos criados
+            para valorizar sua beleza com naturalidade.
+          </p>
+
         </div>
 
         <div class="filter-tabs reveal" role="tablist" aria-label="Filtrar tratamentos">
-          <button class="filter-button active" type="button" data-filter="all">Todos</button>
-          <button class="filter-button" type="button" data-filter="facial">Facial</button>
-          <button class="filter-button" type="button" data-filter="injetaveis">Injetáveis</button>
-          <button class="filter-button" type="button" data-filter="corporal">Corporal</button>
-          <button class="filter-button" type="button" data-filter="capilar">Capilar</button>
+          <button class="filter-button active" type="button" data-filter="all">
+            Todos
+          </button>
+
+          <button class="filter-button" type="button" data-filter="facial">
+            Facial
+          </button>
+
+          <button class="filter-button" type="button" data-filter="injetaveis">
+            Injetáveis
+          </button>
+
+          <button class="filter-button" type="button" data-filter="corporal">
+            Corporal
+          </button>
+
+          <button class="filter-button" type="button" data-filter="capilar">
+            Capilar
+          </button>
         </div>
 
         <div class="treatment-grid">
+
           <article class="treatment-card reveal" data-category="injetaveis">
-            <span class="card-number">01</span><span class="card-icon"><svg>
+
+            <span class="card-number">01</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Harmonização labial</h3>
-            <p>Contorno, hidratação e volume equilibrado para valorizar a expressão sem perder a naturalidade.</p>
-            <div class="card-meta"><span>A partir de <strong>R$ 790*</strong></span><a href="#agendamento" aria-label="Agendar harmonização labial"><svg>
+
+            <p>
+              Contorno, hidratação e volume equilibrado para valorizar
+              a expressão sem perder a naturalidade.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                A partir de
+                <strong>R$ 790*</strong>
+              </span>
+
+              <a href="#agendamento" aria-label="Agendar harmonização labial">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
           <article class="treatment-card reveal" data-category="facial">
-            <span class="card-number">02</span><span class="card-icon"><svg>
+
+            <span class="card-number">02</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Limpeza de pele premium</h3>
-            <p>Higienização profunda, extração delicada e ativos selecionados para devolver luminosidade.</p>
-            <div class="card-meta"><span>A partir de <strong>R$ 180*</strong></span><a href="#agendamento" aria-label="Agendar limpeza de pele"><svg>
+
+            <p>
+              Higienização profunda, extração delicada e ativos
+              selecionados para devolver luminosidade.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                A partir de
+                <strong>R$ 180*</strong>
+              </span>
+
+              <a href="#agendamento" aria-label="Agendar limpeza de pele">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
           <article class="treatment-card reveal" data-category="facial">
-            <span class="card-number">03</span><span class="card-icon"><svg>
+
+            <span class="card-number">03</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Microagulhamento</h3>
-            <p>Estímulo à renovação da pele para suavizar marcas, textura irregular e linhas finas.</p>
-            <div class="card-meta"><span>A partir de <strong>R$ 320*</strong></span><a href="#agendamento" aria-label="Agendar microagulhamento"><svg>
+
+            <p>
+              Estímulo à renovação da pele para suavizar marcas,
+              textura irregular e linhas finas.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                A partir de
+                <strong>R$ 320*</strong>
+              </span>
+
+              <a href="#agendamento" aria-label="Agendar microagulhamento">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
           <article class="treatment-card reveal" data-category="corporal">
-            <span class="card-number">04</span><span class="card-icon"><svg>
+
+            <span class="card-number">04</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Crio de placas</h3>
-            <p>Tecnologia não invasiva que integra protocolos personalizados de cuidado corporal.</p>
-            <div class="card-meta"><span>Sessão a partir de <strong>R$ 490*</strong></span><a href="#crio" aria-label="Conhecer crio de placas"><svg>
+
+            <p>
+              Tecnologia não invasiva que integra protocolos
+              personalizados de cuidado corporal.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                Sessão a partir de
+                <strong>R$ 490*</strong>
+              </span>
+
+              <a href="#crio" aria-label="Conhecer crio de placas">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
           <article class="treatment-card reveal" data-category="capilar">
-            <span class="card-number">05</span><span class="card-icon"><svg>
+
+            <span class="card-number">05</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Terapia capilar</h3>
-            <p>Avaliação do couro cabeludo e protocolos voltados à saúde, força e crescimento dos fios.</p>
-            <div class="card-meta"><span>A partir de <strong>R$ 220*</strong></span><a href="#agendamento" aria-label="Agendar terapia capilar"><svg>
+
+            <p>
+              Avaliação do couro cabeludo e protocolos voltados
+              à saúde, força e crescimento dos fios.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                A partir de
+                <strong>R$ 220*</strong>
+              </span>
+
+              <a href="#agendamento" aria-label="Agendar terapia capilar">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
           <article class="treatment-card reveal" data-category="facial">
-            <span class="card-number">06</span><span class="card-icon"><svg>
+
+            <span class="card-number">06</span>
+
+            <span class="card-icon">
+              <svg>
                 <use href="#i-spark"></use>
-              </svg></span>
+              </svg>
+            </span>
+
             <h3>Design do olhar</h3>
-            <p>Micropigmentação shadow e extensão de cílios para destacar o olhar com harmonia.</p>
-            <div class="card-meta"><span>A partir de <strong>R$ 160*</strong></span><a href="#agendamento" aria-label="Agendar design do olhar"><svg>
+
+            <p>
+              Micropigmentação shadow e extensão de cílios para
+              destacar o olhar com harmonia.
+            </p>
+
+            <div class="card-meta">
+              <span>
+                A partir de
+                <strong>R$ 160*</strong>
+              </span>
+
+              <a href="#agendamento" aria-label="Agendar design do olhar">
+                <svg>
                   <use href="#i-arrow"></use>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
+
           </article>
+
         </div>
-        <p class="demo-note">* Valores ilustrativos para apresentação. O orçamento final depende de avaliação individual.</p>
+
+        <p class="demo-note">
+          * Valores ilustrativos para apresentação.
+          O orçamento final depende de avaliação individual.
+        </p>
+
       </div>
     </section>
 
+    <!-- CRIO -->
     <section class="crio section section-dark" id="crio">
       <div class="container crio-grid">
+
         <div class="crio-copy reveal">
-          <div class="section-kicker light">Protocolo em destaque</div>
-          <h2>Crio de placas:<br><em>estratégia e precisão.</em></h2>
-          <p>Um protocolo corporal não invasivo, definido após avaliação, que utiliza resfriamento controlado em áreas selecionadas.</p>
-          <ul class="benefit-list">
-            <li><svg>
-                <use href="#i-check"></use>
-              </svg><span><strong>Planejamento individual</strong> conforme objetivos e avaliação.</span></li>
-            <li><svg>
-                <use href="#i-check"></use>
-              </svg><span><strong>Sessão personalizada</strong> com áreas definidas em consulta.</span></li>
-            <li><svg>
-                <use href="#i-check"></use>
-              </svg><span><strong>Acompanhamento profissional</strong> em todas as etapas.</span></li>
-          </ul>
-          <a class="button button-gold" href="#agendamento">Quero saber mais <svg>
-              <use href="#i-arrow"></use>
-            </svg></a>
-        </div>
-        <div class="crio-panel reveal">
-          <span class="crio-label">Avaliação corporal</span>
-          <div class="crio-monogram">RH</div>
-          <div class="crio-stats">
-            <div><strong>01</strong><span>Avaliação cuidadosa</span></div>
-            <div><strong>02</strong><span>Plano personalizado</span></div>
-            <div><strong>03</strong><span>Acompanhamento</span></div>
+
+          <div class="section-kicker light">
+            Protocolo em destaque
           </div>
-          <p>Resultados variam conforme características individuais, hábitos e resposta ao protocolo.</p>
+
+          <h2>
+            Crio de placas:<br>
+            <em>estratégia e precisão.</em>
+          </h2>
+
+          <p>
+            Um protocolo corporal não invasivo, definido após avaliação,
+            que utiliza resfriamento controlado em áreas selecionadas.
+          </p>
+
+          <ul class="benefit-list">
+
+            <li>
+              <svg>
+                <use href="#i-check"></use>
+              </svg>
+
+              <span>
+                <strong>Planejamento individual</strong>
+                conforme objetivos e avaliação.
+              </span>
+            </li>
+
+            <li>
+              <svg>
+                <use href="#i-check"></use>
+              </svg>
+
+              <span>
+                <strong>Sessão personalizada</strong>
+                com áreas definidas em consulta.
+              </span>
+            </li>
+
+            <li>
+              <svg>
+                <use href="#i-check"></use>
+              </svg>
+
+              <span>
+                <strong>Acompanhamento profissional</strong>
+                em todas as etapas.
+              </span>
+            </li>
+
+          </ul>
+
+          <a class="button button-gold" href="#agendamento">
+            Quero saber mais
+            <svg>
+              <use href="#i-arrow"></use>
+            </svg>
+          </a>
+
         </div>
+
+        <div class="crio-panel reveal">
+
+          <span class="crio-label">
+            Avaliação corporal
+          </span>
+
+          <div class="crio-monogram">RH</div>
+
+          <div class="crio-stats">
+
+            <div>
+              <strong>01</strong>
+              <span>Avaliação cuidadosa</span>
+            </div>
+
+            <div>
+              <strong>02</strong>
+              <span>Plano personalizado</span>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>Acompanhamento</span>
+            </div>
+
+          </div>
+
+          <p>
+            Resultados variam conforme características individuais,
+            hábitos e resposta ao protocolo.
+          </p>
+
+        </div>
+
       </div>
     </section>
 
+    <!-- RESULTADOS -->
     <section class="results section" id="resultados">
       <div class="container">
+
         <div class="section-heading split reveal">
+
           <div>
-            <div class="section-kicker">Resultados reais</div>
-            <h2>Detalhes que contam<br><em>novas histórias.</em></h2>
+            <div class="section-kicker">
+              Resultados reais
+            </div>
+
+            <h2>
+              Detalhes que contam<br>
+              <em>novas histórias.</em>
+            </h2>
           </div>
-          <p>Registros de procedimentos realizados, apresentados sem filtros que alterem o resultado. Cada experiência é individual.</p>
+
+          <p>
+            Registros de procedimentos realizados, apresentados sem
+            filtros que alterem o resultado. Cada experiência é individual.
+          </p>
+
         </div>
 
         <div class="results-grid">
+
           <button class="result-item result-tall reveal" type="button" data-image="assets/resultado-labios-01.webp" data-caption="Harmonização labial — contorno e hidratação">
-            <img src="assets/resultado-labios-01.webp" alt="Resultado de harmonização labial" loading="lazy"><span class="result-overlay"><strong>Harmonização labial</strong><small>Contorno e hidratação</small><svg>
+            <img src="assets/resultado-labios-01.webp" alt="Resultado de harmonização labial" loading="lazy">
+
+            <span class="result-overlay">
+              <strong>Harmonização labial</strong>
+              <small>Contorno e hidratação</small>
+              <svg>
                 <use href="#i-expand"></use>
-              </svg></span>
+              </svg>
+            </span>
           </button>
+
           <button class="result-item reveal" type="button" data-image="assets/resultado-olhar.webp" data-caption="Design do olhar — sobrancelhas e cílios">
-            <img src="assets/resultado-olhar.webp" alt="Resultado de design de sobrancelhas e extensão de cílios" loading="lazy"><span class="result-overlay"><strong>Design do olhar</strong><small>Sobrancelhas e cílios</small><svg>
+            <img src="assets/resultado-olhar.webp" alt="Resultado de design de sobrancelhas e extensão de cílios" loading="lazy">
+
+            <span class="result-overlay">
+              <strong>Design do olhar</strong>
+              <small>Sobrancelhas e cílios</small>
+              <svg>
                 <use href="#i-expand"></use>
-              </svg></span>
+              </svg>
+            </span>
           </button>
+
           <button class="result-item reveal" type="button" data-image="assets/resultado-labios-02.webp" data-caption="Harmonização facial — equilíbrio e naturalidade">
-            <img src="assets/resultado-labios-02.webp" alt="Resultado de procedimento facial e labial" loading="lazy"><span class="result-overlay"><strong>Harmonização facial</strong><small>Equilíbrio e naturalidade</small><svg>
+            <img src="assets/resultado-labios-02.webp" alt="Resultado de procedimento facial e labial" loading="lazy">
+
+            <span class="result-overlay">
+              <strong>Harmonização facial</strong>
+              <small>Equilíbrio e naturalidade</small>
+              <svg>
                 <use href="#i-expand"></use>
-              </svg></span>
+              </svg>
+            </span>
           </button>
+
           <button class="result-item result-wide reveal" type="button" data-image="assets/resultado-labios-03.webp" data-caption="Hidratação labial — acabamento natural">
-            <img src="assets/resultado-labios-03.webp" alt="Resultado de hidratação e harmonização labial" loading="lazy"><span class="result-overlay"><strong>Hidratação labial</strong><small>Acabamento natural</small><svg>
+            <img src="assets/resultado-labios-03.webp" alt="Resultado de hidratação e harmonização labial" loading="lazy">
+
+            <span class="result-overlay">
+              <strong>Hidratação labial</strong>
+              <small>Acabamento natural</small>
+              <svg>
                 <use href="#i-expand"></use>
-              </svg></span>
+              </svg>
+            </span>
           </button>
+
         </div>
-        <p class="results-disclaimer">Imagens ilustrativas do portfólio. Resultados são individuais e não podem ser garantidos.</p>
+
+        <p class="results-disclaimer">
+          Imagens ilustrativas do portfólio.
+          Resultados são individuais e não podem ser garantidos.
+        </p>
+
       </div>
     </section>
 
+    <!-- ETAPAS -->
     <section class="journey section section-soft">
       <div class="container">
+
         <div class="section-heading centered reveal">
-          <div class="section-kicker">Sua experiência</div>
-          <h2>Do primeiro contato ao <em>seu resultado.</em></h2>
+
+          <div class="section-kicker">
+            Sua experiência
+          </div>
+
+          <h2>
+            Do primeiro contato ao
+            <em>seu resultado.</em>
+          </h2>
+
         </div>
+
         <div class="journey-grid">
-          <article class="journey-step reveal"><span>01</span>
+
+          <article class="journey-step reveal">
+            <span>01</span>
+
             <div>
               <h3>Escuta</h3>
               <p>Entendemos suas expectativas, rotina e objetivos.</p>
             </div>
           </article>
-          <article class="journey-step reveal"><span>02</span>
+
+          <article class="journey-step reveal">
+            <span>02</span>
+
             <div>
               <h3>Avaliação</h3>
               <p>Analisamos suas necessidades com atenção e segurança.</p>
             </div>
           </article>
-          <article class="journey-step reveal"><span>03</span>
+
+          <article class="journey-step reveal">
+            <span>03</span>
+
             <div>
               <h3>Protocolo</h3>
               <p>Criamos um plano exclusivo, sem fórmulas prontas.</p>
             </div>
           </article>
-          <article class="journey-step reveal"><span>04</span>
+
+          <article class="journey-step reveal">
+            <span>04</span>
+
             <div>
               <h3>Acompanhamento</h3>
               <p>Orientamos os cuidados e acompanhamos sua evolução.</p>
             </div>
           </article>
+
         </div>
+
       </div>
     </section>
 
+    <!-- CURSOS -->
     <section class="academy section" id="mentorias">
       <div class="container academy-grid">
+
         <div class="academy-copy reveal">
-          <div class="section-kicker">Rubia Honorato Academy</div>
-          <h2>Conhecimento que<br><em>impulsiona carreiras.</em></h2>
-          <p>Cursos e mentorias para profissionais da estética que buscam aperfeiçoar técnica, atendimento e posicionamento.</p>
-          <div class="academy-options">
-            <div><span>01</span>
-              <p><strong>Cursos VIP</strong><small>Prática próxima e conteúdo direcionado.</small></p>
-            </div>
-            <div><span>02</span>
-              <p><strong>Mentoria individual</strong><small>Estratégia alinhada ao seu momento profissional.</small></p>
-            </div>
-            <div><span>03</span>
-              <p><strong>Aperfeiçoamento</strong><small>Técnica, segurança e experiência da cliente.</small></p>
-            </div>
+
+          <div class="section-kicker">
+            Rubia Honorato Academy
           </div>
-          <a class="button button-burgundy" href="#agendamento">Tenho interesse <svg>
+
+          <h2>
+            Conhecimento que<br>
+            <em>impulsiona carreiras.</em>
+          </h2>
+
+          <p>
+            Cursos e mentorias para profissionais da estética que
+            buscam aperfeiçoar técnica, atendimento e posicionamento.
+          </p>
+
+          <div class="academy-options">
+
+            <div>
+              <span>01</span>
+
+              <p>
+                <strong>Cursos VIP</strong>
+                <small>Prática próxima e conteúdo direcionado.</small>
+              </p>
+            </div>
+
+            <div>
+              <span>02</span>
+
+              <p>
+                <strong>Mentoria individual</strong>
+                <small>Estratégia alinhada ao seu momento profissional.</small>
+              </p>
+            </div>
+
+            <div>
+              <span>03</span>
+
+              <p>
+                <strong>Aperfeiçoamento</strong>
+                <small>Técnica, segurança e experiência da cliente.</small>
+              </p>
+            </div>
+
+          </div>
+
+          <a class="button button-burgundy" href="#agendamento">
+            Tenho interesse
+            <svg>
               <use href="#i-arrow"></use>
-            </svg></a>
+            </svg>
+          </a>
+
         </div>
+
         <div class="academy-card reveal">
-          <span class="academy-mini">Turmas selecionadas</span>
-          <div class="academy-logo"><small>RH</small><strong>Academy</strong></div>
-          <p>Formação com propósito.<br>Prática com excelência.</p>
+
+          <span class="academy-mini">
+            Turmas selecionadas
+          </span>
+
+          <div class="academy-logo">
+            <small>RH</small>
+            <strong>Academy</strong>
+          </div>
+
+          <p>
+            Formação com propósito.<br>
+            Prática com excelência.
+          </p>
+
           <div class="academy-line"></div>
+
           <span>Lins — SP</span>
+
         </div>
+
       </div>
     </section>
 
+    <!-- DEPOIMENTOS -->
     <section class="testimonials section section-dark" aria-labelledby="testimonials-title">
       <div class="container testimonial-wrap">
+
         <div class="testimonial-title reveal">
-          <div class="section-kicker light">Experiências</div>
-          <h2 id="testimonials-title">Quem vive o cuidado,<br><em>sente a diferença.</em></h2>
-          <p>Depoimentos demonstrativos para composição visual do projeto.</p>
+
+          <div class="section-kicker light">
+            Experiências
+          </div>
+
+          <h2 id="testimonials-title">
+            Quem vive o cuidado,<br>
+            <em>sente a diferença.</em>
+          </h2>
+
+          <p>
+            Depoimentos demonstrativos para composição visual do projeto.
+          </p>
+
         </div>
+
         <div class="testimonial-slider reveal">
+
           <div class="testimonial-track">
+
             <article class="testimonial active">
-              <div class="stars" aria-label="5 estrelas"><svg>
+
+              <div class="stars" aria-label="5 estrelas">
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg></div>
-              <blockquote>“Fui acolhida desde a avaliação. A Rubia explicou cada etapa e o resultado ficou delicado, exatamente como eu queria.”</blockquote>
-              <footer><span>CM</span>
-                <p><strong>Camila M.</strong><small>Depoimento demonstrativo</small></p>
+                </svg>
+              </div>
+
+              <blockquote>
+                “Fui acolhida desde a avaliação. A Rubia explicou
+                cada etapa e o resultado ficou delicado,
+                exatamente como eu queria.”
+              </blockquote>
+
+              <footer>
+                <span>CM</span>
+
+                <p>
+                  <strong>Camila M.</strong>
+                  <small>Depoimento demonstrativo</small>
+                </p>
               </footer>
+
             </article>
+
             <article class="testimonial">
-              <div class="stars" aria-label="5 estrelas"><svg>
+
+              <div class="stars" aria-label="5 estrelas">
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg></div>
-              <blockquote>“O atendimento é cuidadoso e transmite muita segurança. Saí me sentindo renovada e ainda mais confiante.”</blockquote>
-              <footer><span>AL</span>
-                <p><strong>Ana L.</strong><small>Depoimento demonstrativo</small></p>
+                </svg>
+              </div>
+
+              <blockquote>
+                “O atendimento é cuidadoso e transmite muita segurança.
+                Saí me sentindo renovada e ainda mais confiante.”
+              </blockquote>
+
+              <footer>
+                <span>AL</span>
+
+                <p>
+                  <strong>Ana L.</strong>
+                  <small>Depoimento demonstrativo</small>
+                </p>
               </footer>
+
             </article>
+
             <article class="testimonial">
-              <div class="stars" aria-label="5 estrelas"><svg>
+
+              <div class="stars" aria-label="5 estrelas">
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg><svg>
+                </svg>
+                <svg>
                   <use href="#i-star"></use>
-                </svg></div>
-              <blockquote>“Tudo foi pensado para mim, sem pressa e sem exageros. A experiência superou minhas expectativas.”</blockquote>
-              <footer><span>RS</span>
-                <p><strong>Renata S.</strong><small>Depoimento demonstrativo</small></p>
+                </svg>
+              </div>
+
+              <blockquote>
+                “Tudo foi pensado para mim, sem pressa e sem exageros.
+                A experiência superou minhas expectativas.”
+              </blockquote>
+
+              <footer>
+                <span>RS</span>
+
+                <p>
+                  <strong>Renata S.</strong>
+                  <small>Depoimento demonstrativo</small>
+                </p>
               </footer>
+
             </article>
+
           </div>
-          <div class="slider-controls"><button type="button" class="slider-prev" aria-label="Depoimento anterior"><svg>
+
+          <div class="slider-controls">
+
+            <button type="button" class="slider-prev" aria-label="Depoimento anterior">
+              <svg>
                 <use href="#i-arrow"></use>
-              </svg></button>
-            <div class="slider-dots" aria-label="Selecionar depoimento"></div><button type="button" class="slider-next" aria-label="Próximo depoimento"><svg>
+              </svg>
+            </button>
+
+            <div class="slider-dots" aria-label="Selecionar depoimento"></div>
+
+            <button type="button" class="slider-next" aria-label="Próximo depoimento">
+              <svg>
                 <use href="#i-arrow"></use>
-              </svg></button>
+              </svg>
+            </button>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
+    <!-- PERGUNTAS -->
     <section class="faq section" id="duvidas">
       <div class="container faq-grid">
+
         <div class="faq-intro reveal">
-          <div class="section-kicker">Dúvidas frequentes</div>
-          <h2>Informação também é uma forma de <em>cuidado.</em></h2>
-          <p>Reunimos respostas para você se sentir segura antes de dar o primeiro passo.</p><a class="text-link" href="#agendamento">Falar com a equipe <svg>
+
+          <div class="section-kicker">
+            Dúvidas frequentes
+          </div>
+
+          <h2>
+            Informação também é uma forma de
+            <em>cuidado.</em>
+          </h2>
+
+          <p>
+            Reunimos respostas para você se sentir segura antes
+            de dar o primeiro passo.
+          </p>
+
+          <a class="text-link" href="#agendamento">
+            Falar com a equipe
+            <svg>
               <use href="#i-arrow"></use>
-            </svg></a>
+            </svg>
+          </a>
+
         </div>
+
         <div class="accordion reveal">
-          <article class="accordion-item active"><button type="button" aria-expanded="true"><span>Preciso passar por avaliação?</span><svg>
+
+          <article class="accordion-item active">
+
+            <button type="button" aria-expanded="true">
+              <span>Preciso passar por avaliação?</span>
+              <svg>
                 <use href="#i-chevron"></use>
-              </svg></button>
+              </svg>
+            </button>
+
             <div class="accordion-panel">
-              <p>Sim. A avaliação permite entender suas necessidades, histórico e expectativas antes de indicar qualquer protocolo.</p>
+              <p>
+                Sim. A avaliação permite entender suas necessidades,
+                histórico e expectativas antes de indicar qualquer protocolo.
+              </p>
             </div>
+
           </article>
-          <article class="accordion-item"><button type="button" aria-expanded="false"><span>Como funciona o agendamento?</span><svg>
+
+          <article class="accordion-item">
+
+            <button type="button" aria-expanded="false">
+              <span>Como funciona o agendamento?</span>
+              <svg>
                 <use href="#i-chevron"></use>
-              </svg></button>
+              </svg>
+            </button>
+
             <div class="accordion-panel">
-              <p>Escolha o serviço no formulário e envie sua solicitação. O atendimento continua pelo WhatsApp para confirmação.</p>
+              <p>
+                Escolha o serviço no formulário e envie sua solicitação.
+                O atendimento continua pelo WhatsApp para confirmação.
+              </p>
             </div>
+
           </article>
-          <article class="accordion-item"><button type="button" aria-expanded="false"><span>Os valores são fixos?</span><svg>
+
+          <article class="accordion-item">
+
+            <button type="button" aria-expanded="false">
+              <span>Os valores são fixos?</span>
+              <svg>
                 <use href="#i-chevron"></use>
-              </svg></button>
+              </svg>
+            </button>
+
             <div class="accordion-panel">
-              <p>Não. Os valores apresentados neste modelo são demonstrativos. O orçamento correto é definido após avaliação.</p>
+              <p>
+                Não. Os valores apresentados neste modelo são demonstrativos.
+                O orçamento correto é definido após avaliação.
+              </p>
             </div>
+
           </article>
-          <article class="accordion-item"><button type="button" aria-expanded="false"><span>Os procedimentos têm contraindicações?</span><svg>
+
+          <article class="accordion-item">
+
+            <button type="button" aria-expanded="false">
+              <span>Os procedimentos têm contraindicações?</span>
+              <svg>
                 <use href="#i-chevron"></use>
-              </svg></button>
+              </svg>
+            </button>
+
             <div class="accordion-panel">
-              <p>Podem existir contraindicações. Por isso, a avaliação profissional e o preenchimento da ficha de saúde são indispensáveis.</p>
+              <p>
+                Podem existir contraindicações. Por isso, a avaliação
+                profissional e o preenchimento da ficha de saúde são indispensáveis.
+              </p>
             </div>
+
           </article>
-          <article class="accordion-item"><button type="button" aria-expanded="false"><span>Quais são as formas de pagamento?</span><svg>
+
+          <article class="accordion-item">
+
+            <button type="button" aria-expanded="false">
+              <span>Quais são as formas de pagamento?</span>
+              <svg>
                 <use href="#i-chevron"></use>
-              </svg></button>
+              </svg>
+            </button>
+
             <div class="accordion-panel">
-              <p>Neste modelo: Pix, débito e crédito. As condições definitivas devem ser confirmadas diretamente com a clínica.</p>
+              <p>
+                Neste modelo: Pix, débito e crédito. As condições definitivas
+                devem ser confirmadas diretamente com a clínica.
+              </p>
             </div>
+
           </article>
+
         </div>
+
       </div>
     </section>
 
+    <!-- AGENDAMENTO -->
     <section class="booking section section-soft" id="agendamento">
       <div class="container booking-grid">
+
         <div class="booking-info reveal">
-          <div class="section-kicker">Seu momento começa aqui</div>
-          <h2>Vamos criar seu protocolo <em>exclusivo?</em></h2>
-          <p>Preencha os dados e abra uma conversa no WhatsApp. A equipe confirmará o melhor horário para sua avaliação.</p>
+
+          <div class="section-kicker">
+            Seu momento começa aqui
+          </div>
+
+          <h2>
+            Vamos criar seu protocolo
+            <em>exclusivo?</em>
+          </h2>
+
+          <p>
+            Preencha os dados e abra uma conversa no WhatsApp.
+            A equipe confirmará o melhor horário para sua avaliação.
+          </p>
+
           <div class="contact-list">
-            <div><svg>
+
+            <div>
+              <svg>
                 <use href="#i-pin"></use>
               </svg>
-              <p><strong>Localização demonstrativa</strong><span>Rua Floriano Peixoto, 820 — Centro, Lins/SP</span></p>
+
+              <p>
+                <strong>Localização demonstrativa</strong>
+                <span>Rua Floriano Peixoto, 820 — Centro, Lins/SP</span>
+              </p>
             </div>
-            <div><svg>
+
+            <div>
+              <svg>
                 <use href="#i-clock"></use>
               </svg>
-              <p><strong>Horários demonstrativos</strong><span>Segunda a sexta, 8h às 19h — Sábado, 9h às 13h</span></p>
+
+              <p>
+                <strong>Horários demonstrativos</strong>
+                <span>
+                  Segunda a sexta, 8h às 19h —
+                  Sábado, 9h às 13h
+                </span>
+              </p>
             </div>
-            <div><svg>
+
+            <div>
+              <svg>
                 <use href="#i-phone"></use>
               </svg>
-              <p><strong>WhatsApp</strong><span>(14) 99653-3566</span></p>
+
+              <p>
+                <strong>WhatsApp</strong>
+                <span>(14) 99653-3566</span>
+              </p>
             </div>
+
           </div>
+
         </div>
 
         <form class="booking-form reveal" id="booking-form">
-          <div class="form-head"><span>Solicitar avaliação</span><small>Retorno pelo WhatsApp</small></div>
-          <label>Seu nome<input type="text" name="name" placeholder="Como podemos te chamar?" required autocomplete="name"></label>
-          <label>Qual é o seu interesse?
+
+          <div class="form-head">
+            <span>Solicitar avaliação</span>
+            <small>Retorno pelo WhatsApp</small>
+          </div>
+
+          <label>
+            Seu nome
+
+            <input type="text" name="name" placeholder="Como podemos te chamar?" required autocomplete="name">
+          </label>
+
+          <label>
+            Qual é o seu interesse?
+
             <select name="service" required>
               <option value="">Selecione um tratamento</option>
               <option>Harmonização labial</option>
@@ -556,65 +1331,166 @@
               <option>Quero uma avaliação</option>
             </select>
           </label>
-          <label>Melhor período<select name="period" required>
+
+          <label>
+            Melhor período
+
+            <select name="period" required>
               <option value="">Selecione o período</option>
               <option>Manhã</option>
               <option>Tarde</option>
               <option>Noite</option>
-            </select></label>
-          <label>Conte um pouco do que você busca<textarea name="message" rows="3" placeholder="Opcional"></textarea></label>
-          <button class="button button-gold form-submit" type="submit">Continuar no WhatsApp <svg>
+            </select>
+          </label>
+
+          <label>
+            Conte um pouco do que você busca
+
+            <textarea name="message" rows="3" placeholder="Opcional"></textarea>
+          </label>
+
+          <button class="button button-gold form-submit" type="submit">
+            Continuar no WhatsApp
+            <svg>
               <use href="#i-arrow"></use>
-            </svg></button>
-          <p class="form-privacy"><svg>
+            </svg>
+          </button>
+
+          <p class="form-privacy">
+            <svg>
               <use href="#i-shield"></use>
-            </svg> Seus dados serão usados apenas para este atendimento.</p>
+            </svg>
+            Seus dados serão usados apenas para este atendimento.
+          </p>
+
         </form>
+
       </div>
     </section>
+
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="footer section-dark" id="contato">
+
     <div class="container footer-grid">
-      <div class="footer-brand"><a class="brand light-brand" href="#inicio"><span class="brand-mark">RH</span><span class="brand-copy"><strong>Rubia Honorato</strong><small>Estética Avançada</small></span></a>
-        <p>Beleza, ciência e cuidado para realçar o que existe de mais único em você.</p>
-        <div class="social-links"><a href="https://instagram.com/rubiahonorato.esteticista" target="_blank" rel="noopener" aria-label="Instagram"><svg>
+
+      <div class="footer-brand">
+
+        <a class="brand light-brand" href="#inicio">
+
+          <span class="brand-mark">RH</span>
+
+          <span class="brand-copy">
+            <strong>Rubia Honorato</strong>
+            <small>Estética Avançada</small>
+          </span>
+
+        </a>
+
+        <p>
+          Beleza, ciência e cuidado para realçar o que existe
+          de mais único em você.
+        </p>
+
+        <div class="social-links">
+
+          <a href="https://instagram.com/rubiahonorato.esteticista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg>
               <use href="#i-instagram"></use>
-            </svg></a><a href="https://wa.me/5514996533566" target="_blank" rel="noopener" aria-label="WhatsApp"><svg>
+            </svg>
+          </a>
+
+          <a href="https://wa.me/5514996533566" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg>
               <use href="#i-message"></use>
-            </svg></a></div>
+            </svg>
+          </a>
+
+        </div>
+
       </div>
+
       <div>
-        <h3>Navegação</h3><a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#mentorias">Cursos e mentorias</a>
+        <h3>Navegação</h3>
+
+        <a href="#sobre">Sobre</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#mentorias">Cursos e mentorias</a>
       </div>
+
       <div>
-        <h3>Atendimento</h3><a href="#agendamento">Agendar avaliação</a><a href="#duvidas">Dúvidas frequentes</a><a href="https://wa.me/5514996533566" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/rubiahonorato.esteticista" target="_blank" rel="noopener">Instagram</a>
+        <h3>Atendimento</h3>
+
+        <a href="#agendamento">Agendar avaliação</a>
+        <a href="#duvidas">Dúvidas frequentes</a>
+
+        <a href="https://wa.me/5514996533566" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+
+        <a href="https://instagram.com/rubiahonorato.esteticista" target="_blank" rel="noopener">
+          Instagram
+        </a>
       </div>
+
       <div class="footer-address">
+
         <h3>Onde estamos</h3>
-        <p>Rua Floriano Peixoto, 820<br>Centro — Lins/SP</p><small>Endereço demonstrativo</small>
+
+        <p>
+          Rua Floriano Peixoto, 820<br>
+          Centro — Lins/SP
+        </p>
+
+        <small>Endereço demonstrativo</small>
+
       </div>
+
     </div>
+
     <div class="container footer-bottom">
-      <p>© <span id="year"></span> Rubia Honorato. Todos os direitos reservados.</p>
-      <p>Site demonstrativo — confirme informações antes da publicação.</p>
+
+      <p>
+        © <span id="year"></span>
+        Rubia Honorato. Todos os direitos reservados.
+      </p>
+
+      <p>
+        Site demonstrativo — confirme informações antes da publicação.
+      </p>
+
     </div>
+
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/5514996533566?text=Ol%C3%A1%2C%20Rubia!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg>
+  <!-- BOTÃO FLUTUANTE -->
+  <a class="whatsapp-float" href="https://wa.me/5514996533566?text=Ol%C3%A1%2C%20Rubia!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+    <svg>
       <use href="#i-message"></use>
-    </svg><span>Agendar</span></a>
+    </svg>
+    <span>Agendar</span>
+  </a>
 
+  <!-- MODAL DAS FOTOS -->
   <div class="image-modal" role="dialog" aria-modal="true" aria-label="Visualização do resultado" hidden>
-    <button class="modal-close" type="button" aria-label="Fechar imagem"><svg>
+
+    <button class="modal-close" type="button" aria-label="Fechar imagem">
+      <svg>
         <use href="#i-close"></use>
-      </svg></button>
-    <figure><img src="" alt="">
+      </svg>
+    </button>
+
+    <figure>
+      <img src="" alt="">
       <figcaption></figcaption>
     </figure>
+
   </div>
 
-  <script src="script.js"></script>
+  <!-- O ?v=2 impede o celular de carregar o JavaScript antigo -->
+  <script src="script.js?v=2"></script>
 </body>
 
 </html>
